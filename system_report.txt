@@ -1,0 +1,40 @@
+========================================
+       REPORTE DE ESTADO DEL SISTEMA    
+========================================
+Fecha del reporte: jue 16 oct 2025 13:12:16 CEST
+
+--- USUARIOS CONECTADOS (who) ---
+diego    seat0        2025-10-16 12:49 (login screen)
+diego    tty2         2025-10-16 12:49 (tty2)
+diego    pts/2        2025-10-16 13:12
+
+--- USO DE CPU (top - resumen) ---
+top - 13:12:16 up 23 min,  1 user,  load average: 0,17, 0,08, 0,07
+
+--- USO DE MEMORIA (free -h) ---
+               total       usado       libre  compartido   búf/caché  disponible
+Mem:           8,4Gi       1,1Gi       6,6Gi        32Mi       966Mi       7,3Gi
+Inter:            0B          0B          0B
+
+--- ESPACIO EN DISCO (df -h) ---
+S.ficheros     Tamaño Usados  Disp Uso% Montado en
+tmpfs            862M   1,5M  861M   1% /run
+/dev/sda2         18G    12G  5,2G  70% /
+tmpfs            4,3G      0  4,3G   0% /dev/shm
+tmpfs            5,0M   8,0K  5,0M   1% /run/lock
+tmpfs            862M   124K  862M   1% /run/user/1000
+
+--- ÚLTIMOS 10 ERRORES DEL SISTEMA (dmesg | tail -10) ---
+[   18.237993] 10:49:30.675237 main     7.2.2 r170484 started. Verbose level = 0
+[   18.243544] 10:49:30.680806 main     vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+[   18.894567] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[   19.233541] kauditd_printk_skb: 148 callbacks suppressed
+[   19.233545] audit: type=1400 audit(1760611771.670:160): apparmor="DENIED" operation="capable" class="cap" profile="/usr/sbin/cupsd" pid=1305 comm="cupsd" capability=12  capname="net_admin"
+[   20.028832] loop19: detected capacity change from 0 to 8
+[   27.641614] rfkill: input handler disabled
+[   35.125733] systemd-journald[258]: File /var/log/journal/7e0de30abe10473bb106e54aee492f24/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.
+[   35.620501] rfkill: input handler enabled
+[   40.080916] rfkill: input handler disabled
+
+========================================
+REPORTE COMPLETO EN logs/system_report.txt
